@@ -1,0 +1,25 @@
+class Solution {
+    public int[] evenOddBit(int n) {
+        int index = 0;
+        int even_index = 0;
+        int odd_index = 0;
+        int[] ans_array = new int[2];
+        while(n > 0)
+        {
+            if((n & 1)==1)
+            {
+                if(index%2 == 0)
+                    even_index++;
+                else
+                    odd_index++;
+            }
+            n >>= 1;
+            index++;
+        }
+        ans_array[0]= even_index;
+        ans_array[1]= odd_index;
+
+        return ans_array;
+        
+    }
+}
