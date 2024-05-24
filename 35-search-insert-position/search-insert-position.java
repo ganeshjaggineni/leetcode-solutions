@@ -7,7 +7,7 @@ class Solution {
     }
     public static int findFloorBinIndex(int[] nums,int target)
     {
-        int low = 0,high = nums.length-1,index = 0;
+        int low = 0,high = nums.length-1,index = -1;
         if(target>nums[high])
             return nums.length;
         while(low<=high)
@@ -21,6 +21,6 @@ class Solution {
             else
                 low = mid+1;
         }
-        return index;
+        return (index==-1)?low:index;
     }
 }
