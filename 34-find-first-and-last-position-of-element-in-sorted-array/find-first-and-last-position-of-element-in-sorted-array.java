@@ -30,25 +30,12 @@ class Solution {
             }
             else if(target < nums[mid])
             {
-               
-                high = mid - 1;
-                System.out.println("if block");
-                 System.out.println("mid = "+mid);
-                                        System.out.println("low"+low);
-
-                   System.out.println("high"+high);
-               
+                high = mid - 1;  
             }
             else
-            {
                 low = mid+1;
-                System.out.println("else block");
-                 System.out.println("mid = "+mid);
-                   System.out.println("low "+low);
-                   System.out.println("high"+high);
-
-                //    System.out.println("first"+first_index);
-            }
+              
+            
         }
         return first_index;
     }
@@ -68,13 +55,11 @@ class Solution {
                 low = mid+1;
             }
             else if(target > nums[mid])
-            {
-              
                 low = mid+1;
-            }
             else
                 high = mid-1;
         }
         return last_index;
     }
+    //BY GANESH JAGGINENI
 }
