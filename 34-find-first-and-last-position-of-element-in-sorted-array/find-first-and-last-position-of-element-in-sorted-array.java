@@ -13,8 +13,6 @@ class Solution {
         int high = nums.length-1;
         int first_index = -1;
         int mid = 0;
-        System.out.println("first at low "+low);
-         System.out.println("first at high ="+high);
         while(low <= high)
         {
             mid = (low+high)/2;
@@ -22,11 +20,6 @@ class Solution {
             {
                  first_index = mid;
                    high = mid-1;
-                   System.out.println("mid = "+mid);
-                       System.out.println("low"+low);
-                   System.out.println("high"+high);
-                   System.out.println("first"+first_index);
-
             }
             else if(target < nums[mid])
             {
