@@ -8,10 +8,7 @@ class Solution {
             rev_num = rev_num*10+num%10;
             num /= 10;
         }
-        if(x == rev_num)
-            return true;
-
-        return false;
+       return x==rev_num;
         
     }
     //BY GANESH JAGGINENI
