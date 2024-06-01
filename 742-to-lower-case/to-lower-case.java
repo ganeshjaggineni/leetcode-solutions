@@ -10,14 +10,24 @@ class Solution {
         // }
         // return String.valueOf(char_arr);
 
-        StringBuilder str = new StringBuilder(s);
-         for(int i=0;i<str.length();i++)
+        //method 2 using string builder
+        // StringBuilder str = new StringBuilder(s);
+        //  for(int i=0;i<str.length();i++)
+        // {
+        //     char ch = str.charAt(i);
+        //     if(ch >= 'A' && ch <= 'Z')
+        //         str.setCharAt(i,(char)(ch+32));
+        // }
+        // return str.toString();
+
+             StringBuilder str = new StringBuilder(s);
+          for(int i=0;i<str.length();i++)
         {
             char ch = str.charAt(i);
             if(ch >= 'A' && ch <= 'Z')
-                str.setCharAt(i,(char)(ch+32));
+               str.setCharAt(i,(char)(ch^32));
         }
-        return str.toString();
+         return str.toString();
     }
     //BY GANESH JAGGINENI
 }
