@@ -13,8 +13,9 @@ class Solution {
         StringBuilder str = new StringBuilder(s);
          for(int i=0;i<str.length();i++)
         {
-            if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')
-                str.setCharAt(i,(char)(str.charAt(i)+32));
+            char ch = str.charAt(i);
+            if(ch >= 'A' && ch <= 'Z')
+                str.setCharAt(i,(char)(ch+32));
         }
         return str.toString();
     }
