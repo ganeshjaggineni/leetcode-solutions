@@ -28,10 +28,10 @@ class Solution {
         primes[0] = true;
         primes[1] = true;
         int cnt = n-2;
-        for (int i = 2; i*i<=n; i++) {
+        for (int i = 2; i*i< n; i++) {
             if (primes[i]) {
                 
-                for (int j = i * i; j < n; j = j + i) {
+                for (int j = i * i; j <n; j = j + i) {
                     if (primes[j]) {
                         primes[j] = false;
                         cnt--;
