@@ -24,7 +24,7 @@ class Solution {
     }
 
     public static int findShipmentDays(int[] weights, int mid_capacity) {
-        int days = 0;
+        int days = 1;
         int sum = 0;
         for (int i = 0; i < weights.length; i++) {
             if (sum + weights[i] <= mid_capacity) {
@@ -35,7 +35,7 @@ class Solution {
                 days++;
             }
         }
-        days++;
+        // days++;
         return days;
     }
     // BY GANESH JAGGINENI
