@@ -8,7 +8,7 @@ class Solution {
         }
         int low = 1;
         int high = max_piles;
-        int res = 0;
+        int res = max_piles;
         while (low <= high) {
             int mid = low + (high - low) / 2;
             long ans = eatBananas(piles, mid);
@@ -26,7 +26,8 @@ class Solution {
     public static long eatBananas(int[] piles, int k) {
         long value = 0;
         for (int i = 0; i < piles.length; i++) {
-            value += (int) Math.ceil((double) piles[i] / k);
+            // value += (int) Math.ceil((double) piles[i] / k);
+             value += (piles[i] + k - 1) / k;
         }
         return value;
     }
