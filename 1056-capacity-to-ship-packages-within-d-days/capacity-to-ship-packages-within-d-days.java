@@ -9,18 +9,18 @@ class Solution {
                 start_capacity = weights[i];
             end_capacity += weights[i];
         }
-        int ans = 0;
+        // int ans = 0;
         while (start_capacity <= end_capacity) {
             int mid_capacity = start_capacity + (end_capacity - start_capacity) / 2;
             int calc_days = findShipmentDays(weights, mid_capacity);
             if (calc_days <= days) {
-                ans = mid_capacity;
+                // ans = mid_capacity;
                 end_capacity = mid_capacity - 1;
             } else
                 start_capacity = mid_capacity + 1;
         }
 
-        return ans;
+        return start_capacity;
     }
 
     public static int findShipmentDays(int[] weights, int mid_capacity) {
