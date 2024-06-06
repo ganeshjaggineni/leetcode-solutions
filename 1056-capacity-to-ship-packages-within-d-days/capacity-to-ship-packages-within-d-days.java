@@ -4,7 +4,9 @@ class Solution {
         int start_capacity = 0;
         int end_capacity = 0;
         for (int i = 0; i < weights.length; i++) {
-            start_capacity = Math.max(start_capacity, weights[i]);
+            // start_capacity = Math.max(start_capacity, weights[i]);
+            if (weights[i] > start_capacity)
+                start_capacity = weights[i];
             end_capacity += weights[i];
         }
         int ans = 0;
