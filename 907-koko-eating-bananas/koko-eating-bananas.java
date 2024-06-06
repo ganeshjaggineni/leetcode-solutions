@@ -8,7 +8,7 @@ class Solution {
         }
         int low = 1;
         int high = max_piles;
-        long res = 0;
+        int res = 0;
         while (low <= high) {
             int mid = low + (high - low) / 2;
             long ans = eatBananas(piles, mid);
@@ -20,7 +20,7 @@ class Solution {
 
         }
 
-        return (int) res;
+        return res;
     }
 
     public static long eatBananas(int[] piles, int k) {
