@@ -42,13 +42,14 @@ class Solution {
         {
             pre[i] = pre[i-1]*nums[i];
         }
+        //suffix product calculation
         suf[n-1] = nums[n-1];
          for(int i=n-2;i>=0;i--)
         {
             suf[i] = suf[i+1]*nums[i];
         }
-        System.out.println(Arrays.toString(pre));
-         System.out.println(Arrays.toString(suf));
+        // System.out.println(Arrays.toString(pre));
+        //  System.out.println(Arrays.toString(suf));
          ans[0] = suf[1];
          ans[n-1] = pre[n-2];
          for(int i=1;i<n-1;i++)
