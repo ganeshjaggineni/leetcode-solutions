@@ -3,11 +3,12 @@ class Solution {
 
         int n = heights.length;
         int mismatch_idx = 0;
-       int[] expected_heights = new int[n];
-       for(int i=0;i<n;i++)
-       {
-        expected_heights[i] = heights[i];
-       }
+    //    int[] expected_heights = new int[n];
+    //    for(int i=0;i<n;i++)
+    //    {
+    //     expected_heights[i] = heights[i];
+    //    }
+        int[] expected_heights = Arrays.copyOf(heights,n);
        Arrays.sort(expected_heights);
        for(int i=0;i<n;i++)
        {
