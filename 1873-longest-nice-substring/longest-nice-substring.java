@@ -15,8 +15,6 @@ class Solution {
                     {
                         maxNiceSubStrLen = j-i+1;
                         maxNiceStr = s.substring(i,j+1);
-                        System.out.println("max nic len = "+maxNiceSubStrLen);
-                        System.out.println("max nice str = "+maxNiceStr);
                     }
                 }
             }
@@ -31,20 +29,15 @@ class Solution {
         {
             set.add(ch);
         }
-        System.out.println("string = "+s);
-        Iterator<Character> iterator = set.iterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next()+" ");
-        }
+       
          for(char ch : s.toCharArray())
         {
-            System.out.println("character alter "+(char)(ch^32));
            if(!set.contains((char)(ch^32)))
            {
-            System.out.println("retrun false");
              return false;
            }
         }
         return true;
     }
+    //BY GANESH JAGGINENI
 }
