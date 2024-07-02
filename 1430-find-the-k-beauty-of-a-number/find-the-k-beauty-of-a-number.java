@@ -11,7 +11,6 @@ class Solution {
             {
                 ans = ans*10+Integer.parseInt(String.valueOf(str_num.charAt(j)));
             }
-            System.out.println("ans = "+ans);
             if(ans != 0 && num%ans == 0)
                 cnt++;
         }
