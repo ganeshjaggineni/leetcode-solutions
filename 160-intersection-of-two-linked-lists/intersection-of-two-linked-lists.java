@@ -21,7 +21,6 @@ public class Solution {
         {
             if(curr1 == curr2)
             {
-                System.out.println("curr 1 data = "+curr1.val+"curr2 data "+curr2.val);
                 return curr1;
             }
             curr2 = curr2.next;
