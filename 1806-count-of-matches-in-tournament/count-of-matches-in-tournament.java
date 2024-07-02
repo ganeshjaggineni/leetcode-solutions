@@ -5,7 +5,6 @@ class Solution {
         while(teams > 1)
         {
                 matches = matches+(teams/2);
-                System.out.println("matches ="+matches);
             if(teams%2 == 0)
             {
                 teams = teams/2;
@@ -14,7 +13,6 @@ class Solution {
             {
                teams = teams/2+1;
             }
-            System.out.println("teams = "+teams);
             
         }
         return matches;
