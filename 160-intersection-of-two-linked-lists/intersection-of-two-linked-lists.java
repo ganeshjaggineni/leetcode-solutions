@@ -12,6 +12,7 @@
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 
+/*
         ListNode curr1 = headA;
         
        while(curr1 != null)
@@ -28,6 +29,22 @@ public class Solution {
         curr1 = curr1.next;
        }
        return null;
-       
+
+    */
+    //METHOD 2 USING HASHSET TO STORES NODES
+        Set<ListNode> store_nodes = new HashSet<>();
+        
+        while(headA != null)
+        {
+            store_nodes.add(headA);
+             headA = headA.next;
+        }
+        while(headB != null)
+        {
+            if(store_nodes.contains(headB))
+                return headB;
+            headB = headB.next;
+        }
+        return null;
     }
 }
