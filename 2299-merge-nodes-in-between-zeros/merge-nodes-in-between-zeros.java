@@ -23,10 +23,8 @@ class Solution {
                 sum = sum+p2.val;
                 p2 = p2.next;
             }
-            if(p2 == null)
-                p1.next = null;
-            else
-            {
+            if(p2 != null)
+              {
                 p2.val = sum;
                 p1.next = p2;
                 p2 = p2.next;
