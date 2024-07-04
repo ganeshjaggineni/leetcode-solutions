@@ -11,6 +11,7 @@
 class Solution {
     public ListNode mergeNodes(ListNode head) {
 
+        /*
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
         ListNode p1 = dummy;
@@ -33,6 +34,28 @@ class Solution {
             
         }
         return dummy.next;
+        */
+        ListNode orgcurr = head.next;
+        ListNode dummy = new ListNode(-1);
+        ListNode newcurr = dummy;
+        int sum = 0;
+        while(orgcurr != null)
+        {
+            if(orgcurr.val == 0)
+            {
+                ListNode newnode = new ListNode(sum);
+                newcurr.next = newnode;
+                newcurr = newcurr.next;
+                sum = 0;
+            }
+            else
+            {
+                sum += orgcurr.val;
+            }
+            orgcurr = orgcurr.next;
+        }
+        return dummy.next;
+
         
     }
 }
