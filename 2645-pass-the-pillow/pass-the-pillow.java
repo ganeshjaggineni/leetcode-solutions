@@ -26,23 +26,26 @@ class Solution {
         //     }
         // }
         // return var;
-          int position = 1;
+        
+        int pos = 1;
         boolean forward = true;
-
-        for (int t = 1; t <= time; t++) {
-            if (forward) {
-                position++;
-                if (position == n) {
+        for(int t=1;t<=time;t++)
+        {
+            if(forward)
+            {
+                pos++;
+                if(pos == n)
                     forward = false;
-                }
-            } else {
-                position--;
-                if (position == 1) {
+            }
+            else
+            {
+                pos--;
+                if(pos == 1)
+                {
                     forward = true;
                 }
             }
         }
-
-        return position;
+        return pos;
     }
 }
