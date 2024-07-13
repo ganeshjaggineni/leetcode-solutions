@@ -11,6 +11,7 @@ class Solution {
                 if(k == 0)
                 {
                     end_idx = i;
+                    break;
                 }
             }
         }
@@ -19,4 +20,5 @@ class Solution {
         else
             return s.substring(0,end_idx);
     }
+    //BY GANESH JAGGINENI
 }
