@@ -18,12 +18,12 @@ class Solution {
         {
             if(i == idx)
             {
-            System.out.println("icx "+i);
+            // System.out.println("icx "+i);
                 continue;
             }
             else if(i+1 < arr.length && i+1 == idx)
             {
-                            System.out.println("icx +1  "+(i+1));
+                            // System.out.println("icx +1  "+(i+1));
 
                 if(i+2 < arr.length && arr[i] >= arr[i+2])
                     return false;
@@ -31,7 +31,7 @@ class Solution {
             else if(i+1 < arr.length && arr[i] >= arr[i+1])
             {
 
-                System.out.println("cehcking els if ");
+                // System.out.println("cehcking els if ");
                 return false;
             }
         }
