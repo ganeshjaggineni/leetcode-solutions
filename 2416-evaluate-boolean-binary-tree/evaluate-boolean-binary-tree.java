@@ -16,18 +16,17 @@
 class Solution {
     public boolean evaluateTree(TreeNode root) {
         
-        if(root.left == null || root.right == null)
+        if(root.left == null && root.right == null)
         {
-            if(root.val == 1)
-                return true;
-            return false;
+            return root.val == 1;         
         }
         boolean leftsubtree = evaluateTree(root.left);
         boolean rightsubtree = evaluateTree(root.right);
         if(root.val == 2)
             return leftsubtree||rightsubtree;
-    
-        return leftsubtree && rightsubtree;
+        else if(root.val == 3)
+            return leftsubtree && rightsubtree;
+        return false;
     }
     //BY GANESH JAGGINENI
 }
