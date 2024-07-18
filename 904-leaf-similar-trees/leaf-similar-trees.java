@@ -20,8 +20,8 @@ class Solution {
          List<Integer> list2 = new ArrayList<>();
          getLeafSimilar(root1,list1);
          getLeafSimilar(root2,list2);
-         System.out.println(list1);
-         System.out.println(list2);
+        //  System.out.println(list1);
+        //  System.out.println(list2);
         return list1.equals(list2);
     }
     public static void getLeafSimilar(TreeNode root,List<Integer> list)
