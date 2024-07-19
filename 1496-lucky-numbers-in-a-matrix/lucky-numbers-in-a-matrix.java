@@ -15,7 +15,7 @@ class Solution {
             }
             set1.add(min);
         }
-        System.out.println(set1);
+        // System.out.println(set1);
 
             for(int j=0;j<matrix[0].length;j++)
             {
@@ -32,7 +32,7 @@ class Solution {
             if(set1.contains(max))
             {
 
-                System.out.println(max);
+                // System.out.println(max);
                 list.add(max);
             }
 
