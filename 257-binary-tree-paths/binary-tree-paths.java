@@ -28,10 +28,12 @@ class Solution {
         path = path + Integer.toString(root.val);
         if(root.left == null && root.right == null)
             rootToLeafPaths.add(path);
+        else
+        {
         path += "->";
-
         binaryTreePathsHelper(root.left,path,rootToLeafPaths);
         binaryTreePathsHelper(root.right,path,rootToLeafPaths);
+        }
     }
     //BY GANESH JAGGINENI
 }
