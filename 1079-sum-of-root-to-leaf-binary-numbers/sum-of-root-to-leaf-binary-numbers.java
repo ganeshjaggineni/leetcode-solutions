@@ -27,8 +27,6 @@ class Solution {
         num = num<<1 | root.val;
         if(root.left == null && root.right == null)
         {
-            System.out.println("num = "+num);
-            // sum = sum + converToDecimal(num);
             sum = sum + num;
         }
 
@@ -37,19 +35,5 @@ class Solution {
         sumRootToLeafHelper(root.right,num);
 
     }
-    public static int converToDecimal(int num)
-    {
-        int len = 0;
-        int decimalNum = 0;
-        while(num > 0)
-        {
-            int last_dig = num%10;
-            decimalNum += (1<<len)*last_dig;
-            num /= 10;
-            len++;
-
-        }
-        // System.out.println("decimal num "+decimalNum);
-        return decimalNum;
-    }
+  //BY GANESH JAGGINENI
 }
