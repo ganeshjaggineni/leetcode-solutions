@@ -20,17 +20,17 @@ class Solution {
         int maxPrime = 0;
         for(int i=0;i<nums.length;i++)
         {
-            for(int j=0;j<nums[0].length;j++)
-            {
-                if(i == j || j==nums.length-i-1)
-                {
-                    if(isPrime[nums[i][j]])
-                    {
-                        maxPrime = Math.max(maxPrime,nums[i][j]);
-                    }
-                }
-            }
+           if(isPrime[nums[i][i]])
+           {
+                maxPrime = Math.max(maxPrime,nums[i][i]);
+           }
+           if(isPrime[nums[i][nums.length-i-1]])
+           {
+                maxPrime = Math.max(maxPrime,nums[i][nums.length-i-1]);
+           }
+          
         }
+       
         return maxPrime;
         
     }
