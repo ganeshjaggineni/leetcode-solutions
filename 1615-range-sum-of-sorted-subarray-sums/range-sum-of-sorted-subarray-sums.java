@@ -16,7 +16,7 @@ class Solution {
         }
 
         Collections.sort(subArrList);
-        System.out.println(subArrList);
+        // System.out.println(subArrList);
         for(int i=left-1;i<right;i++)
         {
             subArrSum = (subArrSum+subArrList.get(i))%MOD;
