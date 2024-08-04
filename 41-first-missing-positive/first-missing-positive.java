@@ -2,7 +2,7 @@ class Solution {
     public int firstMissingPositive(int[] nums) {
         
         int n = nums.length;
-        System.out.println(n);
+        // System.out.println(n);
         boolean[] visited = new boolean[n+1];
         //0 indexed
         for(int i=0;i<n;i++)
