@@ -11,17 +11,17 @@ class Solution {
       System.out.println(charFreq);
       int currentPushCost = 1;
       int totalCost = 0;
-      int pushCnt = 0;
+      int keysUsedCnt = 0;
       for(int i=0;i<charFreq.size();i++)
       {
         int frequency = charFreq.get(i);
-        totalCost += frequency*currentPushCost;
-        pushCnt++;
-        if(pushCnt == 8)
+        keysUsedCnt++;
+        if(i%8 == 0 && i != 0)
         {
-            pushCnt = 0;
+            keysUsedCnt = 0;
             currentPushCost++;
         }
+        totalCost += frequency*currentPushCost;
       } 
     return totalCost;
     }
