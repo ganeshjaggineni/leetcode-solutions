@@ -30,4 +30,5 @@ class Solution {
         return convertToWords(num / 1000000000) + " Billion" + (num%1000000000 != 0 ?" "+convertToWords(num%1000000000):"");
     //    return "gani";
     }
+    //BY GANESH JAGGINENI
 }
