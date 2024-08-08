@@ -1,6 +1,7 @@
 class Solution {
     public boolean divisorGame(int n) {
-        
+        //METHOD 1 STIMULATION
+        /*
         boolean alice = false;
         while(n > 1)
         {
@@ -18,5 +19,9 @@ class Solution {
            
         }
         return alice;
+        */
+
+        //METHOD 2 USING LOGIC
+        return (n%2 == 0)?true:false;
     }
 }
