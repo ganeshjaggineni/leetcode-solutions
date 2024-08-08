@@ -8,11 +8,8 @@ class Solution {
             {
                 if(n%x == 0)
                 {
-                    System.out.println("n ="+n+"x ="+x);
                      alice   = !alice;
-                     System.out.println("alice = "+alice);
                      n = n-x;
-                     System.out.println(" n becomes "+n);
                      break;
                 }
                 else
