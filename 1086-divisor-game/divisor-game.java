@@ -22,6 +22,31 @@ class Solution {
         */
 
         //METHOD 2 USING LOGIC
-        return (n%2 == 0)?true:false;
+      //  return (n%2 == 0)?true:false;
+
+        //METHOD 3 using dynamic programming
+        boolean[] gameState = new boolean[n+1];
+        gameState[1] = false;
+        for(int i=2;i<=n;i++)
+        {
+        for(int x=1;x<i;x++)
+        {
+            boolean foundDiv = false;
+            if(i%x == 0)
+            {
+                if(!gameState[i-x])
+                {
+                    gameState[i] = true;
+                    foundDiv = true;
+                    break;
+                }
+                if(foundDiv)
+                {
+                    break;
+                }
+            }
+        }
+        }
+        return gameState[n];
     }
 }
