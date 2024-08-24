@@ -20,8 +20,6 @@ class Solution {
         possiblePali[idx++] = buildPali(firstHalf+1,even);
         possiblePali[idx++] = (long)Math.pow(10,len-1)-1;
         possiblePali[idx++] = (long)Math.pow(10,len)+1;
-
-        System.out.println(Arrays.toString(possiblePali));
         long closestPali = findClosestPali(possiblePali,Long.parseLong(n));
         return String.valueOf(closestPali);
     }
@@ -61,4 +59,5 @@ class Solution {
         }
         return res;
     }
+    //BY GANESH JAGGINENI
 }
