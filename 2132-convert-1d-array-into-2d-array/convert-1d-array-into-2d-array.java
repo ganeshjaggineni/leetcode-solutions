@@ -2,12 +2,12 @@ class Solution {
     public int[][] construct2DArray(int[] original, int m, int n) {
 
        //method 1 : Extreme stimulation
-       /* 
+       
+        if(original.length != m*n)
+            return new int[][]{};
         int[][] res = new int[m][n];
         int row = 0;
         int currIdx = 0;
-        if(original.length != m*n)
-            return new int[][]{};
         while(currIdx < original.length)
         {
             for(int i=0;i<=n-1;i++)
@@ -22,9 +22,10 @@ class Solution {
             row++;
         }
         return res;
-        */
+        
 
         //method 2 : simulation || logical iterating
+        /*
         if(m*n != original.length)
             return new int[][]{};
         int currIdx = 0;
@@ -37,5 +38,6 @@ class Solution {
             }
         }
         return resMat;
+        */
     }
 }
