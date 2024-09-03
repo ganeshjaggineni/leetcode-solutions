@@ -6,17 +6,12 @@ class Solution {
         {
            sum += findSum(s.charAt(i)-96);
         }
-        k = k-1;
            
-        while(k-- > 0)
+        while(k-- > 1)
         {
             int num = sum;
             sum = 0;
-            while(num != 0)
-            {
-                sum += num%10;
-                num /= 10;
-            }
+            sum += findSum(num);
         }
          return sum;
     }
