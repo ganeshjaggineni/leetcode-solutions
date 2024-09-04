@@ -16,14 +16,11 @@ class Solution {
             if(command == -1)
             {
                curr = (curr + 1)%4; 
-               System.out.println("in comm 1 = "+curr);
                continue;
             }
             else if(command == -2)
             {
                 curr = (curr + 3)%4;
-                System.out.println("in comm 2 = "+curr);
-
                 continue;
             }
             for(int j=0;j<command;j++)
@@ -31,7 +28,6 @@ class Solution {
                 int nextX = x+ dir[curr][0];
                 int nextY = y+dir[curr][1];
                 String obStr = nextX+"_"+nextY;
-                System.out.println(obStr);
                 if(obstacleSet.contains(obStr))
                     break;
                  x = nextX;
