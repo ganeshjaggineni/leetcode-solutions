@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select product_name,sum(Orders.unit) as unit from Products,Orders where Products.Product_id = Orders.product_id and Orders.order_date  BETWEEN  '2020-02-01' AND '2020-02-29' GROUP BY product_name having sum(Orders.unit) >= 100;
